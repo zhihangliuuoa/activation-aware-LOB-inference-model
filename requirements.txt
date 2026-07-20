@@ -1,0 +1,7 @@
+# Training / ONNX export (workstation)
+torch>=2.5
+timm
+numpy
+onnx
+
+# Jetson deployment: TensorRT and PyCUDA are provided by JetPack (no pip install needed)

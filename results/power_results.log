@@ -1,0 +1,48 @@
+######################################################################
+# Jetson Orin Nano power measurement   2026-06-04T00:34:17.733323
+# RUN_SECONDS=30  IDLE_SECONDS=10  tegra_interval=50ms
+######################################################################
+
+======================================================================
+MODEL: DeepLOB   (other_model/deeplob_fp16.engin)
+======================================================================
+Input shape (1, 1, 100, 40)  ->  Output shape (1, 3)
+Measuring idle baseline for 10s ...
+Running inference loop for 30s ...
+Inferences: 16794   Wall: 30.00s   Latency: 1.7864 ms   Throughput: 559.8 qps
+Rail                 Idle(W)  Active(W)   E/inf(uJ)  dynE/inf(uJ)
+VDD_IN                 4.092      5.302    9471.911      2162.432
+VDD_CPU_GPU_CV         0.897      1.812    3236.818      1634.126
+VDD_SOC                1.349      1.386    2475.750        65.900
+
+======================================================================
+MODEL: Axial-LOB   (other_model/axiallob_fp16.engin)
+======================================================================
+Input shape (1, 1, 40, 40)  ->  Output shape (1, 3)
+Measuring idle baseline for 10s ...
+Running inference loop for 30s ...
+Inferences: 7328   Wall: 30.00s   Latency: 4.0943 ms   Throughput: 244.2 qps
+Rail                 Idle(W)  Active(W)   E/inf(uJ)  dynE/inf(uJ)
+VDD_IN                 4.099      8.017   32823.119     16039.150
+VDD_CPU_GPU_CV         0.909      3.510   14370.466     10648.073
+VDD_SOC                1.349      1.808    7401.267      1877.147
+
+======================================================================
+MODEL: CFLOB   (cflob/cflob_fp16.engine)
+======================================================================
+Input shape (1, 1, 10, 40)  ->  Output shape (1, 3)
+Measuring idle baseline for 10s ...
+Running inference loop for 30s ...
+Inferences: 75776   Wall: 30.00s   Latency: 0.3959 ms   Throughput: 2525.9 qps
+Rail                 Idle(W)  Active(W)   E/inf(uJ)  dynE/inf(uJ)
+VDD_IN                 4.088      5.033    1992.554       374.157
+VDD_CPU_GPU_CV         0.911      1.537     608.411       247.742
+VDD_SOC                1.349      1.422     562.944        28.870
+
+======================================================================
+SUMMARY  (VDD_CPU_GPU_CV rail = inference-attributable)
+======================================================================
+Model          Lat(ms)  Thpt(qps)  P_act(W)   E/inf(uJ)  dynE/inf(uJ)
+DeepLOB         1.7864      559.8     1.812    3236.818      1634.126
+Axial-LOB       4.0943      244.2     3.510   14370.466     10648.073
+CFLOB           0.3959     2525.9     1.537     608.411       247.742

@@ -1,0 +1,53 @@
+axiallob:
+[02/28/2026-02:28:41] [I] [TRT] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 0 MiB, GPU 8 MiB
+[02/28/2026-02:28:41] [V] [TRT] Adding 1 engine(s) to plan file.
+[02/28/2026-02:28:41] [I] [TRT] [MemUsageStats] Peak memory usage during Engine building and serialization: CPU: 1605 MiB
+[02/28/2026-02:28:41] [I] Engine built in 62.9814 sec.
+[02/28/2026-02:28:41] [I] Created engine with size: 1.10909 MiB
+[02/28/2026-02:28:41] [I] [TRT] Loaded engine size: 1 MiB
+[02/28/2026-02:28:41] [V] [TRT] Deserialization required 8602 microseconds.
+[02/28/2026-02:28:41] [I] Engine deserialized in 0.0215174 sec.
+[02/28/2026-02:28:41] [V] [TRT] Total per-runner device persistent memory is 0
+[02/28/2026-02:28:41] [V] [TRT] Total per-runner host persistent memory is 54096
+[02/28/2026-02:28:41] [V] [TRT] Allocated device scratch memory of size 5632000
+[02/28/2026-02:28:41] [V] [TRT] - Runner scratch: 5632000 bytes
+[02/28/2026-02:28:41] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +5, now: CPU 0, GPU 5 (MiB)
+[02/28/2026-02:28:41] [V] [TRT] CUDA lazy loading is enabled.
+[02/28/2026-02:28:41] [I] Setting persistentCacheLimit to 0 bytes.
+[02/28/2026-02:28:41] [I] Created execution context with device memory size: 5.37109 MiB
+
+deeplob:
+[02/28/2026-02:34:29] [I] [TRT] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 0 MiB, GPU 8 MiB
+[02/28/2026-02:34:29] [V] [TRT] Adding 1 engine(s) to plan file.
+[02/28/2026-02:34:29] [I] [TRT] [MemUsageStats] Peak memory usage during Engine building and serialization: CPU: 1666 MiB
+[02/28/2026-02:34:29] [I] Engine built in 103.102 sec.
+[02/28/2026-02:34:29] [I] Created engine with size: 1.03676 MiB
+[02/28/2026-02:34:30] [I] [TRT] Loaded engine size: 1 MiB
+[02/28/2026-02:34:30] [V] [TRT] Deserialization required 10960 microseconds.
+[02/28/2026-02:34:30] [I] Engine deserialized in 0.0234352 sec.
+[02/28/2026-02:34:30] [V] [TRT] Total per-runner device persistent memory is 0
+[02/28/2026-02:34:30] [V] [TRT] Total per-runner host persistent memory is 79472
+[02/28/2026-02:34:30] [V] [TRT] Allocated device scratch memory of size 544256
+[02/28/2026-02:34:30] [V] [TRT] - Runner scratch: 544256 bytes
+[02/28/2026-02:34:30] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +0, now: CPU 0, GPU 0 (MiB)
+[02/28/2026-02:34:30] [V] [TRT] CUDA lazy loading is enabled.
+[02/28/2026-02:34:30] [I] Setting persistentCacheLimit to 0 bytes.
+[02/28/2026-02:34:30] [I] Created execution context with device memory size: 0.519043 MiB
+
+cflob:
+[02/28/2026-02:38:45] [I] [TRT] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 0 MiB, GPU 8 MiB
+[02/28/2026-02:38:45] [V] [TRT] Adding 1 engine(s) to plan file.
+[02/28/2026-02:38:45] [I] [TRT] [MemUsageStats] Peak memory usage during Engine building and serialization: CPU: 2279 MiB
+[02/28/2026-02:38:45] [I] Engine built in 90.8133 sec.
+[02/28/2026-02:38:45] [I] Created engine with size: 0.596592 MiB
+[02/28/2026-02:38:46] [I] [TRT] Loaded engine size: 0 MiB
+[02/28/2026-02:38:46] [V] [TRT] Deserialization required 6196 microseconds.
+[02/28/2026-02:38:46] [I] Engine deserialized in 0.0178417 sec.
+[02/28/2026-02:38:46] [V] [TRT] Total per-runner device persistent memory is 0
+[02/28/2026-02:38:46] [V] [TRT] Total per-runner host persistent memory is 35440
+[02/28/2026-02:38:46] [V] [TRT] Allocated device scratch memory of size 10752
+[02/28/2026-02:38:46] [V] [TRT] - Runner scratch: 10752 bytes
+[02/28/2026-02:38:46] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +0, now: CPU 0, GPU 0 (MiB)
+[02/28/2026-02:38:46] [V] [TRT] CUDA lazy loading is enabled.
+[02/28/2026-02:38:46] [I] Setting persistentCacheLimit to 0 bytes.
+[02/28/2026-02:38:46] [I] Created execution context with device memory size: 0.0102539 MiB

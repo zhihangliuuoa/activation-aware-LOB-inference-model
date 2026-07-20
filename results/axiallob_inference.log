@@ -1,0 +1,164 @@
+jetson@jetson-desktop:~/other_model$ /usr/src/tensorrt/bin/trtexec --loadEngine=axiallob_fp16.engin --fp16 --avgRuns=200 --warmUp=50 --verbose
+&&&& RUNNING TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --loadEngine=axiallob_fp16.engin --fp16 --avgRuns=200 --warmUp=50 --verbose
+[02/27/2026-12:13:04] [I] === Model Options ===
+[02/27/2026-12:13:04] [I] Format: *
+[02/27/2026-12:13:04] [I] Model: 
+[02/27/2026-12:13:04] [I] Output:
+[02/27/2026-12:13:04] [I] 
+[02/27/2026-12:13:04] [I] === System Options ===
+[02/27/2026-12:13:04] [I] Device: 0
+[02/27/2026-12:13:04] [I] DLACore: 
+[02/27/2026-12:13:04] [I] Plugins:
+[02/27/2026-12:13:04] [I] setPluginsToSerialize:
+[02/27/2026-12:13:04] [I] dynamicPlugins:
+[02/27/2026-12:13:04] [I] ignoreParsedPluginLibs: 0
+[02/27/2026-12:13:04] [I] 
+[02/27/2026-12:13:04] [I] === Inference Options ===
+[02/27/2026-12:13:04] [I] Batch: Explicit
+[02/27/2026-12:13:04] [I] Input inference shapes: model
+[02/27/2026-12:13:04] [I] Iterations: 10
+[02/27/2026-12:13:04] [I] Duration: 3s (+ 50ms warm up)
+[02/27/2026-12:13:04] [I] Sleep time: 0ms
+[02/27/2026-12:13:04] [I] Idle time: 0ms
+[02/27/2026-12:13:04] [I] Inference Streams: 1
+[02/27/2026-12:13:04] [I] ExposeDMA: Disabled
+[02/27/2026-12:13:04] [I] Data transfers: Enabled
+[02/27/2026-12:13:04] [I] Spin-wait: Disabled
+[02/27/2026-12:13:04] [I] Multithreading: Disabled
+[02/27/2026-12:13:04] [I] CUDA Graph: Disabled
+[02/27/2026-12:13:04] [I] Separate profiling: Disabled
+[02/27/2026-12:13:04] [I] Time Deserialize: Disabled
+[02/27/2026-12:13:04] [I] Time Refit: Disabled
+[02/27/2026-12:13:04] [I] NVTX verbosity: 0
+[02/27/2026-12:13:04] [I] Persistent Cache Ratio: 0
+[02/27/2026-12:13:04] [I] Optimization Profile Index: 0
+[02/27/2026-12:13:04] [I] Weight Streaming Budget: 100.000000%
+[02/27/2026-12:13:04] [I] Inputs:
+[02/27/2026-12:13:04] [I] Debug Tensor Save Destinations:
+[02/27/2026-12:13:04] [I] === Reporting Options ===
+[02/27/2026-12:13:04] [I] Verbose: Enabled
+[02/27/2026-12:13:04] [I] Averages: 200 inferences
+[02/27/2026-12:13:04] [I] Percentiles: 90,95,99
+[02/27/2026-12:13:04] [I] Dump refittable layers:Disabled
+[02/27/2026-12:13:04] [I] Dump output: Disabled
+[02/27/2026-12:13:04] [I] Profile: Disabled
+[02/27/2026-12:13:04] [I] Export timing to JSON file: 
+[02/27/2026-12:13:04] [I] Export output to JSON file: 
+[02/27/2026-12:13:04] [I] Export profile to JSON file: 
+[02/27/2026-12:13:04] [I] 
+[02/27/2026-12:13:04] [I] === Device Information ===
+[02/27/2026-12:13:04] [I] Available Devices: 
+[02/27/2026-12:13:04] [I]   Device 0: "Orin" UUID: GPU-77070885-44b9-558b-8710-ed08ec50e727
+[02/27/2026-12:13:04] [I] Selected Device: Orin
+[02/27/2026-12:13:04] [I] Selected Device ID: 0
+[02/27/2026-12:13:04] [I] Selected Device UUID: GPU-77070885-44b9-558b-8710-ed08ec50e727
+[02/27/2026-12:13:04] [I] Compute Capability: 8.7
+[02/27/2026-12:13:04] [I] SMs: 8
+[02/27/2026-12:13:04] [I] Device Global Memory: 7619 MiB
+[02/27/2026-12:13:04] [I] Shared Memory per SM: 164 KiB
+[02/27/2026-12:13:04] [I] Memory Bus Width: 128 bits (ECC disabled)
+[02/27/2026-12:13:04] [I] Application Compute Clock Rate: 1.02 GHz
+[02/27/2026-12:13:04] [I] Application Memory Clock Rate: 0.918 GHz
+[02/27/2026-12:13:04] [I] 
+[02/27/2026-12:13:04] [I] Note: The application clock rates do not reflect the actual clock rates that the GPU is currently running at.
+[02/27/2026-12:13:04] [I] 
+[02/27/2026-12:13:04] [I] TensorRT version: 10.3.0
+[02/27/2026-12:13:04] [I] Loading standard plugins
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::BatchedNMSDynamic_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::BatchedNMS_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::BatchTilePlugin_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::Clip_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::CoordConvAC version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::CropAndResizeDynamic version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::CropAndResize version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::DecodeBbox3DPlugin version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::DetectionLayer_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::EfficientNMS_Explicit_TF_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::EfficientNMS_Implicit_TF_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::EfficientNMS_ONNX_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::EfficientNMS_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::FlattenConcat_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::GenerateDetection_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::GridAnchor_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::GridAnchorRect_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::InstanceNormalization_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::InstanceNormalization_TRT version 2
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::InstanceNormalization_TRT version 3
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::LReLU_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ModulatedDeformConv2d version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::MultilevelCropAndResize_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::MultilevelProposeROI_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::MultiscaleDeformableAttnPlugin_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::NMSDynamic_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::NMS_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::Normalize_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::PillarScatterPlugin version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::PriorBox_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ProposalDynamic version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ProposalLayer_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::Proposal version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::PyramidROIAlign_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::Region_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::Reorg_TRT version 2
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::Reorg_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ResizeNearest_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ROIAlign_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ROIAlign_TRT version 2
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::RPROI_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ScatterElements version 2
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ScatterElements version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::ScatterND version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::SpecialSlice_TRT version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::Split version 1
+[02/27/2026-12:13:04] [V] [TRT] Registered plugin creator - ::VoxelGeneratorPlugin version 1
+[02/27/2026-12:13:04] [I] [TRT] Loaded engine size: 0 MiB
+[02/27/2026-12:13:04] [V] [TRT] Deserialization required 10146 microseconds.
+[02/27/2026-12:13:04] [I] Engine deserialized in 0.0390932 sec.
+[02/27/2026-12:13:04] [V] [TRT] Total per-runner device persistent memory is 0
+[02/27/2026-12:13:04] [V] [TRT] Total per-runner host persistent memory is 59584
+[02/27/2026-12:13:04] [V] [TRT] Allocated device scratch memory of size 5427200
+[02/27/2026-12:13:04] [V] [TRT] - Runner scratch: 5427200 bytes
+[02/27/2026-12:13:04] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +5, now: CPU 0, GPU 5 (MiB)
+[02/27/2026-12:13:04] [V] [TRT] CUDA lazy loading is enabled.
+[02/27/2026-12:13:04] [I] Setting persistentCacheLimit to 0 bytes.
+[02/27/2026-12:13:04] [I] Created execution context with device memory size: 5.17578 MiB
+[02/27/2026-12:13:04] [I] Using random values for input input
+[02/27/2026-12:13:04] [I] Input binding for input with dimensions 1x1x40x40 is created.
+[02/27/2026-12:13:04] [I] Output binding for logits with dimensions 1x3 is created.
+[02/27/2026-12:13:04] [I] Starting inference
+[02/27/2026-12:13:07] [I] Warmup completed 1 queries over 50 ms
+[02/27/2026-12:13:07] [I] Timing trace has 1047 queries over 2.98863 s
+[02/27/2026-12:13:07] [I] 
+[02/27/2026-12:13:07] [I] === Trace details ===
+[02/27/2026-12:13:07] [I] Trace averages of 200 runs:
+[02/27/2026-12:13:07] [I] Average on 200 runs - GPU latency: 3.02354 ms - Host latency: 3.06373 ms (enqueue 0.837938 ms)
+[02/27/2026-12:13:07] [I] Average on 200 runs - GPU latency: 2.80655 ms - Host latency: 2.83646 ms (enqueue 0.817591 ms)
+[02/27/2026-12:13:07] [I] Average on 200 runs - GPU latency: 2.8061 ms - Host latency: 2.83572 ms (enqueue 0.809612 ms)
+[02/27/2026-12:13:07] [I] Average on 200 runs - GPU latency: 2.80536 ms - Host latency: 2.83504 ms (enqueue 0.809243 ms)
+[02/27/2026-12:13:07] [I] Average on 200 runs - GPU latency: 2.80392 ms - Host latency: 2.83253 ms (enqueue 0.805839 ms)
+[02/27/2026-12:13:07] [I] 
+[02/27/2026-12:13:07] [I] === Performance summary ===
+[02/27/2026-12:13:07] [I] Throughput: 350.327 qps
+[02/27/2026-12:13:07] [I] Latency: min = 2.7981 ms, max = 7.8959 ms, mean = 2.87757 ms, median = 2.81158 ms, percentile(90%) = 2.82646 ms, percentile(95%) = 2.8335 ms, percentile(99%) = 5.63462 ms
+[02/27/2026-12:13:07] [I] Enqueue Time: min = 0.746185 ms, max = 1.27254 ms, mean = 0.815949 ms, median = 0.800735 ms, percentile(90%) = 0.871338 ms, percentile(95%) = 0.898911 ms, percentile(99%) = 0.970093 ms
+[02/27/2026-12:13:07] [I] H2D Latency: min = 0.0155029 ms, max = 0.0757446 ms, mean = 0.0238772 ms, median = 0.0217896 ms, percentile(90%) = 0.0331421 ms, percentile(95%) = 0.0380859 ms, percentile(99%) = 0.0435486 ms
+[02/27/2026-12:13:07] [I] GPU Compute Time: min = 2.771 ms, max = 7.83795 ms, mean = 2.84603 ms, median = 2.78137 ms, percentile(90%) = 2.78662 ms, percentile(95%) = 2.78918 ms, percentile(99%) = 5.57933 ms
+[02/27/2026-12:13:07] [I] D2H Latency: min = 0.00488281 ms, max = 0.0179825 ms, mean = 0.00766203 ms, median = 0.00756836 ms, percentile(90%) = 0.00842285 ms, percentile(95%) = 0.00878906 ms, percentile(99%) = 0.00952148 ms
+[02/27/2026-12:13:07] [I] Total Host Walltime: 2.98863 s
+[02/27/2026-12:13:07] [I] Total GPU Compute Time: 2.97979 s
+[02/27/2026-12:13:07] [W] * GPU compute time is unstable, with coefficient of variance = 15.6648%.
+[02/27/2026-12:13:07] [W]   If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+[02/27/2026-12:13:07] [I] Explanations of the performance metrics are printed in the verbose logs.
+[02/27/2026-12:13:07] [V] 
+[02/27/2026-12:13:07] [V] === Explanations of the performance metrics ===
+[02/27/2026-12:13:07] [V] Total Host Walltime: the host walltime from when the first query (after warmups) is enqueued to when the last query is completed.
+[02/27/2026-12:13:07] [V] GPU Compute Time: the GPU latency to execute the kernels for a query.
+[02/27/2026-12:13:07] [V] Total GPU Compute Time: the summation of the GPU Compute Time of all the queries. If this is significantly shorter than Total Host Walltime, the GPU may be under-utilized because of host-side overheads or data transfers.
+[02/27/2026-12:13:07] [V] Throughput: the observed throughput computed by dividing the number of queries by the Total Host Walltime. If this is significantly lower than the reciprocal of GPU Compute Time, the GPU may be under-utilized because of host-side overheads or data transfers.
+[02/27/2026-12:13:07] [V] Enqueue Time: the host latency to enqueue a query. If this is longer than GPU Compute Time, the GPU may be under-utilized.
+[02/27/2026-12:13:07] [V] H2D Latency: the latency for host-to-device data transfers for input tensors of a single query.
+[02/27/2026-12:13:07] [V] D2H Latency: the latency for device-to-host data transfers for output tensors of a single query.
+[02/27/2026-12:13:07] [V] Latency: the summation of H2D Latency, GPU Compute Time, and D2H Latency. This is the latency to infer a single query.
+[02/27/2026-12:13:07] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v100300] # /usr/src/tensorrt/bin/trtexec --loadEngine=axiallob_fp16.engin --fp16 --avgRuns=200 --warmUp=50 --verbose
+
